@@ -1,6 +1,6 @@
 package tests;
 
-import gages.Page;
+import pages.Page;
 import org.testng.annotations.*;
 
 public class Tests {

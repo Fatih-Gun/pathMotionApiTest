@@ -1,4 +1,4 @@
-package gages;
+package pages;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
