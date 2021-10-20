@@ -18,11 +18,11 @@ public class Page {
     public void gettingSearchListSize(){
 
          response= given()
-                .contentType(ContentType.JSON)
-                .log().all().
+                .contentType(ContentType.JSON).
+                log().all().
                         when()
                 .get(url)
-                 .prettyPeek()
+//                 .prettyPeek()
          ;
 
         List searchList= response.jsonPath().getList("discussions.hits");
@@ -35,9 +35,11 @@ public class Page {
                 .contentType(ContentType.JSON).
                 log().all().
                         when()
-                .get(url);
+                .get(url)
+//                .prettyPeek()
+        ;
 
-        String expectedCategory="internal career mobility";
+        String expectedCategory="internal career mobilit";
         String actualCategory=response.jsonPath().getString("discussions.hits[0].category");
 
         Assert.assertEquals(actualCategory,expectedCategory,"Category does not match");
@@ -45,12 +47,12 @@ public class Page {
     }
     public void verifyId(){
         response=given()
-                .contentType(ContentType.JSON)
-                .log().all()
-                        .when()
+                .contentType(ContentType.JSON).
+//                log().all().
+                        when()
                 .get(url);
 
-        String expectedId="91008";
+        String expectedId="9100";
         String actualId=response.jsonPath().get("discussions.hits[0].id");
 
         Assert.assertEquals(actualId,expectedId,"Id does not match");

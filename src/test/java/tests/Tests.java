@@ -14,4 +14,19 @@ public class Tests {
         page.verifyId();
     }
 
+    @Test
+    public void gettingSearchListSize(){
+        page.gettingSearchListSize();
+    }
+
+    @Test
+    public void verifyCategory(){
+        page.verifyCategory();
+    }
+
+    @Test
+    public void verifyId(){
+        page.verifyId();
+    }
+
 }
