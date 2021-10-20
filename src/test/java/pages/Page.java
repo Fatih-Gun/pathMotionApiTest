@@ -39,7 +39,7 @@ public class Page {
 //                .prettyPeek()
         ;
 
-        String expectedCategory="internal career mobilit";
+        String expectedCategory="internal career mobility";
         String actualCategory=response.jsonPath().getString("discussions.hits[0].category");
 
         Assert.assertEquals(actualCategory,expectedCategory,"Category does not match");
@@ -52,7 +52,7 @@ public class Page {
                         when()
                 .get(url);
 
-        String expectedId="9100";
+        String expectedId="91008";
         String actualId=response.jsonPath().get("discussions.hits[0].id");
 
         Assert.assertEquals(actualId,expectedId,"Id does not match");
